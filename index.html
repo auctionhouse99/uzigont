@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Узигонт — дома с участками в Ломоносовском районе, 3 км от КАД</title>
+  <meta name="description" content="Коттеджный посёлок «Узигонт»: 25 готовых домов с участками 10 соток в Ломоносовском районе, 3 км от КАД. Все коммуникации входят в стоимость. От 15 млн ₽." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo">
+        <img class="logo__img logo__img--light" src="images/logo-white.png" alt="Узигонт — коттеджный посёлок" />
+        <img class="logo__img logo__img--dark" src="images/logo.png" alt="Узигонт — коттеджный посёлок" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#houses">Выбрать дом</a>
+        <a href="#plan">Расположение и генплан</a>
+        <a href="#quality">Качество строительства</a>
+        <a href="#terms">Условия покупки</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__contacts">
+        <a href="tel:+78121234567" class="header__phone">+7 (812) 123-45-67</a>
+        <a href="#callback" class="btn btn--primary btn--sm">Получить презентацию</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== 1. Hero ===== -->
+  <section class="hero" id="hero">
+    <img class="hero__img" src="images/street.jpg" alt="Коттеджный посёлок Узигонт" />
+    <div class="hero__shade"></div>
+    <div class="container hero__content">
+      <span class="hero__badge">от 15 млн ₽</span>
+      <h1 class="hero__title">Дома с участками<br>в Ломоносовском районе<br>в 3 км от КАД</h1>
+      <p class="hero__lead">3 км от выезда на КАД. Всего 25 участков.<br>Все коммуникации входят в стоимость.</p>
+      <div class="hero__actions">
+        <a href="#houses" class="btn btn--primary btn--lg">Выбрать коттедж</a>
+        <a href="#callback" class="btn btn--ghost btn--lg">Получить презентацию</a>
+      </div>
+      <ul class="hero__tags">
+        <li>🏠 ИЖС</li>
+        <li>🔥 Газ</li>
+        <li>⚡ Электричество</li>
+        <li>💧 Канализация</li>
+        <li>🏛️ Единая архитектурная концепция</li>
+      </ul>
+    </div>
+    <a href="#advantages" class="hero__scroll" aria-label="Вниз"><span></span></a>
+  </section>
+
+  <!-- ===== 2. Advantages ===== -->
+  <section class="section advantages" id="advantages">
+    <div class="container">
+      <div class="feature3">
+        <article class="feature">
+          <img src="images/street.jpg" alt="Единый архитектурный стиль" />
+          <h3>Единый архитектурный стиль</h3>
+          <p>Современные фасады, большие окна, аккуратные линии.</p>
+        </article>
+        <article class="feature">
+          <img src="images/plot.jpg" alt="Подземные коммуникации" />
+          <h3>Подземные коммуникации</h3>
+          <p>Газ, электричество, вода — по границе участков.</p>
+        </article>
+        <article class="feature">
+          <img src="images/welcome.jpg" alt="Welcome-зона" />
+          <h3>Welcome-зона</h3>
+          <p>Контролируемый въезд, единый дизайн-код территории.</p>
+        </article>
+      </div>
+
+      <div class="adv-list">
+        <div class="adv">
+          <span class="adv__num">3 км</span>
+          <p>До выезда на КАД и 20 минут до метро «Проспект Ветеранов». Не придётся терять время на долгие поездки в город. Расположение — одно из лучших предложений ближайшего пригорода.</p>
+        </div>
+        <div class="adv">
+          <span class="adv__num">Всё включено</span>
+          <p>Центральные коммуникации (газ, вода, канализация, электричество) входят в стоимость. Полный комплект центральных коммуникаций — сразу при покупке дома.</p>
+        </div>
+        <div class="adv">
+          <span class="adv__num">Один стиль</span>
+          <p>Единая архитектурная концепция — дома выдержаны в одном стиле. Это создаёт премиальную атмосферу, со временем стоимость домов выгодно растёт.</p>
+        </div>
+        <div class="adv">
+          <span class="adv__num">10 соток</span>
+          <p>Идеальные размеры участков. Оптимум для жизни без лишней заботы о «большом хозяйстве» — баланс пространства для семьи и простоты ухода.</p>
+        </div>
+        <div class="adv">
+          <span class="adv__num">25 домов</span>
+          <p>Камерная атмосфера. Всего 25 домов — никаких «неожиданных соседей», уединение и приватность, достойное окружение.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. Houses ===== -->
+  <section class="section houses" id="houses">
+    <div class="container">
+      <div class="section__head center">
+        <span class="tag">Каталог</span>
+        <h2 class="section__title">Выберите свой дом</h2>
+        <p class="section__sub">Нажмите на проект — внутри планировки, рендеры и подробные характеристики.</p>
+      </div>
+      <div class="houses__grid" id="housesGrid"><!-- cards injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- ===== 4. Master plan ===== -->
+  <section class="section plan" id="plan">
+    <div class="container">
+      <div class="section__head center">
+        <span class="tag tag--light">Генплан</span>
+        <h2 class="section__title section__title--light">Генеральный план посёлка</h2>
+        <p class="section__sub section__sub--light">Общая территория посёлка — 3 Га. На ней расположены 25 участков площадью 10 соток. К каждому участку ведёт благоустроенная подъездная дорога.</p>
+      </div>
+
+      <div class="plan__aerial">
+        <img src="images/aerial1.jpg" alt="Посёлок Узигонт с высоты птичьего полёта" />
+      </div>
+
+      <div class="plan__wrap">
+        <div class="plan__map">
+          <svg viewBox="0 0 1000 420" class="plan__svg" role="img" aria-label="Интерактивный генплан">
+            <rect width="1000" height="420" fill="#eef2e8"/>
+            <path class="plan__road" d="M0 210 H1000"/>
+            <path class="plan__road plan__road--thin" d="M40 20 V400 M960 20 V400"/>
+            <text x="14" y="205" class="plan__cap">въезд / КПП →</text>
+            <g class="plots"></g>
+          </svg>
+        </div>
+
+        <aside class="plan__info" id="plotInfo">
+          <h3 class="plan__info-title">Участок не выбран</h3>
+          <p class="plan__info-hint">Выберите свободный участок на схеме.</p>
+          <dl class="plan__props">
+            <div><dt>Номер</dt><dd data-prop="id">—</dd></div>
+            <div><dt>Площадь</dt><dd data-prop="area">10 соток</dd></div>
+            <div><dt>Статус</dt><dd data-prop="status">—</dd></div>
+            <div><dt>Дом + участок</dt><dd data-prop="price">—</dd></div>
+          </dl>
+          <a href="#callback" class="btn btn--primary btn--full">Забронировать участок</a>
+          <div class="plan__legend">
+            <span><i class="dot dot--free"></i>Свободен</span>
+            <span><i class="dot dot--booked"></i>Бронь</span>
+            <span><i class="dot dot--sold"></i>Продан</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Location ===== -->
+  <section class="section location" id="location">
+    <div class="container">
+      <div class="section__head center">
+        <span class="tag">Расположение</span>
+        <h2 class="section__title">На карте</h2>
+        <p class="section__sub">Ленинградская область, Ломоносовский район, деревня Узигонты. 3 км до КАД, 20 минут до метро «Проспект Ветеранов».</p>
+      </div>
+      <div class="location__grid">
+        <div class="location__map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=29.889077%2C59.806722&z=15&pt=29.889077%2C59.806722%2Cpm2rdm"
+            loading="lazy" allowfullscreen title="Расположение посёлка Узигонт"></iframe>
+        </div>
+        <ul class="poi">
+          <li><b>📍 Коттеджный посёлок «Узигонт»</b><span>д. Узигонты, Ломоносовский р-н · 59.806722, 29.889077</span></li>
+          <li><b>🛣️ КАД — 3 км</b><span>маршрут без пробок до центра СПб</span></li>
+          <li><b>🚇 м. «Проспект Ветеранов» — 20 мин</b><span>на автомобиле</span></li>
+          <li><b>🏫 Школы и детские сады</b><span>в шаговой и транспортной доступности</span></li>
+          <li><b>🏥 Медицинские центры</b><span>поликлиники и частные клиники рядом</span></li>
+          <li><b>🛒 Магазины</b><span>Магнит, Пятёрочка, строительный гипермаркет</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. Quality ===== -->
+  <section class="section quality" id="quality">
+    <div class="container">
+      <div class="section__head center">
+        <span class="tag">Технологии</span>
+        <h2 class="section__title">Качество строительства</h2>
+        <p class="section__sub">Технология строительства — монолит, газобетон, дерево. Надёжный тепловой контур и инженерия премиального уровня.</p>
+      </div>
+
+      <div class="quality__hero">
+        <img src="images/project1-1.jpg" alt="Технология строительства" />
+        <div class="quality__hero-cap">
+          <h3>«Так будет у вас»</h3>
+          <p>15 кВт электричества, газовая котельная, магистральный газ. Все узлы ввода газа и электрики выполнены по проекту и сданы в эксплуатацию.</p>
+        </div>
+      </div>
+
+      <div class="quality__cards">
+        <article class="qcard">
+          <img src="images/project2-2.jpg" alt="Стеновые конструкции" />
+          <div class="qcard__body">
+            <h4>Стеновые конструкции</h4>
+            <p>Газосиликатные блоки толщиной 250 мм с утеплением 80 мм создают надёжную основу для комфорта. Фасадные термопанели поддерживают оптимальный микроклимат.</p>
+          </div>
+        </article>
+        <article class="qcard">
+          <img src="images/project3-4.jpg" alt="Кровля премиального уровня" />
+          <div class="qcard__body">
+            <h4>Кровля премиального уровня</h4>
+            <p>Плоская утеплённая кровля с ПВХ-мембраной и современной водосточной системой. Тепловой контур рассчитан на круглогодичное проживание.</p>
+          </div>
+        </article>
+        <article class="qcard">
+          <img src="images/project4-2.jpg" alt="Инженерия и гарантии" />
+          <div class="qcard__body">
+            <h4>Инженерия и гарантии</h4>
+            <p>Монолитный фундамент-плита, заведённые коммуникации, прозрачная приёмка дома. Гарантийный период — 5 лет на конструктив.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. Terms ===== -->
+  <section class="section terms" id="terms">
+    <div class="container">
+      <div class="section__head center">
+        <span class="tag tag--light">Условия покупки</span>
+        <h2 class="section__title section__title--light">Прозрачная стоимость</h2>
+      </div>
+
+      <div class="formula">
+        <span class="formula__item">Участок</span><i>+</i>
+        <span class="formula__item">Дом</span><i>+</i>
+        <span class="formula__item">Коммуникации</span><i>=</i>
+        <span class="formula__item formula__item--total">ИТОГО</span>
+      </div>
+      <p class="terms__note">Нет скрытых платежей — все коммуникации включены в стоимость.</p>
+
+      <div class="mortgage">
+        <div class="mortgage__main">
+          <span class="tag tag--light">Ипотека</span>
+          <div class="mortgage__rate">3,5%<small>ставка</small></div>
+          <p class="mortgage__pay">Ежемесячный платёж от <b>47 072 ₽</b></p>
+          <p class="mortgage__sub">Рассрочка от застройщика. Подберём программу под ваш бюджет.</p>
+          <a href="#callback" class="btn btn--white">Узнать условия</a>
+        </div>
+        <div class="mortgage__banks">
+          <span>Банки-партнёры</span>
+          <div class="banks">
+            <div class="bank-logo">Сбер</div>
+            <div class="bank-logo">ВТБ</div>
+            <div class="bank-logo">Дом.РФ</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz -->
+      <div class="quiz" id="quiz">
+        <div class="quiz__side">
+          <h3>Ответьте на 5 вопросов</h3>
+          <p>И получите персональную подборку: проекты, планировки и цены под ваши параметры.</p>
+          <ul class="quiz__bullets">
+            <li>✓ проекты</li><li>✓ планировки</li><li>✓ цены</li>
+          </ul>
+        </div>
+        <div class="quiz__body">
+          <div class="quiz__bar"><span id="quizBar"></span></div>
+          <div class="quiz__steps" id="quizSteps"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. Contacts ===== -->
+  <section class="section contacts" id="contacts">
+    <div class="container contacts__inner">
+      <div class="contacts__info">
+        <span class="tag">Контакты</span>
+        <h2 class="section__title">Запишитесь на просмотр</h2>
+        <p class="contacts__addr">Ленинградская область, Ломоносовский район,<br>Низинское сельское поселение, деревня Узигонты.</p>
+        <ul class="contacts__list">
+          <li><b>Телефон:</b> <a href="tel:+78121234567">+7 (812) 123-45-67</a></li>
+          <li><b>E-mail:</b> <a href="mailto:mail@uzigont.ru">mail@uzigont.ru</a></li>
+          <li><b>Офис продаж:</b> ежедневно с 10:00 до 19:00</li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="VK">VK</a>
+        </div>
+      </div>
+
+      <form class="form" id="callbackForm" novalidate>
+        <h3 id="callback">Обратная связь</h3>
+        <div class="form__row">
+          <label>Ваше имя<input type="text" name="name" placeholder="Иван" required /></label>
+          <label>Телефон<input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required /></label>
+        </div>
+        <label>Интересует
+          <select name="interest">
+            <option>Подбор дома</option>
+            <option>Бронирование участка</option>
+            <option>Расчёт ипотеки</option>
+            <option>Запись на просмотр</option>
+          </select>
+        </label>
+        <label class="form__check">
+          <input type="checkbox" required />
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+        <button type="submit" class="btn btn--primary btn--full btn--lg">Отправить заявку</button>
+        <p class="form__note" id="formNote" hidden>Спасибо! Менеджер перезвонит в течение 15 минут.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#hero" class="logo logo--footer">
+          <img class="logo__img" src="images/logo-white.png" alt="Узигонт — коттеджный посёлок" />
+        </a>
+        <p class="footer__about">Коттеджный посёлок «Узигонт». Готовые дома с участками 10 соток в Ломоносовском районе, 3 км от КАД. Все коммуникации включены в стоимость.</p>
+      </div>
+      <nav class="footer__col">
+        <h4>Навигация</h4>
+        <a href="#houses">Выбрать дом</a>
+        <a href="#plan">Расположение и генплан</a>
+        <a href="#quality">Качество строительства</a>
+        <a href="#terms">Условия покупки</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+78121234567">+7 (812) 123-45-67</a>
+        <a href="mailto:mail@uzigont.ru">mail@uzigont.ru</a>
+        <p>д. Узигонты, Ломоносовский р-н, ЛО</p>
+        <div class="socials socials--light">
+          <a href="#">TG</a><a href="#">WA</a><a href="#">VK</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2026 КП «Узигонт». ООО «УНР».</span>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== House modal ===== -->
+  <div class="modal" id="houseModal" hidden>
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="modal__close" data-close aria-label="Закрыть">×</button>
+      <div class="modal__gallery">
+        <img id="mGalleryMain" src="" alt="" />
+        <div class="modal__thumbs" id="mThumbs"></div>
+      </div>
+      <div class="modal__content">
+        <h3 id="mTitle"></h3>
+        <p class="modal__type" id="mType"></p>
+        <p class="modal__price" id="mPrice"></p>
+        <dl class="modal__specs" id="mSpecs"></dl>
+        <div class="modal__actions">
+          <a href="#callback" class="btn btn--primary" data-close>Записаться на просмотр</a>
+          <a href="#callback" class="btn btn--ghost btn--dark" data-close>Получить каталог с ценами</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

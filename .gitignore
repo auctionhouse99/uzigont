@@ -1,0 +1,14 @@
+# Тяжёлые исходники — в репозиторий не нужны (сайт использует images/*.jpg и images/logo*.png)
+Поселок/
+проекты/
+*.tif
+*.psd
+*.ai
+*.eps
+*.pdf
+лого jpg.JPG
+УЗИГОНТ PNG.png
+
+# Системное
+Thumbs.db
+.DS_Store
