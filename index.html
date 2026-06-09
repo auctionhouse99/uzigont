@@ -133,24 +133,18 @@
 
       <div class="plan__wrap">
         <div class="plan__map">
-          <svg viewBox="0 0 1000 420" class="plan__svg" role="img" aria-label="Интерактивный генплан">
-            <rect width="1000" height="420" fill="#eef2e8"/>
-            <!-- лес по периметру -->
-            <g>
-              <circle cx="35" cy="40" r="20" fill="#cfe0c2"/><circle cx="80" cy="28" r="15" fill="#cfe0c2"/>
-              <circle cx="965" cy="46" r="22" fill="#cfe0c2"/><circle cx="928" cy="26" r="14" fill="#cfe0c2"/>
-              <circle cx="975" cy="378" r="20" fill="#cfe0c2"/><circle cx="935" cy="395" r="14" fill="#cfe0c2"/>
-            </g>
-            <!-- въезд / КПП снизу слева -->
-            <path class="plan__road plan__road--thin" d="M30 410 V235 H150"/>
-            <text x="18" y="405" class="plan__cap">въезд / КПП</text>
-            <!-- центральная дорога -->
-            <path class="plan__road" d="M150 235 H975"/>
-            <!-- зона отдыха: парк и пруд -->
-            <rect x="70" y="150" width="150" height="170" rx="16" fill="#d6e8cb"/>
-            <path d="M95 250 q30 -52 92 -30 q22 28 -16 54 q-48 28 -76 -24 Z" fill="#bcdcee"/>
-            <circle cx="108" cy="188" r="6" fill="#93c07b"/><circle cx="132" cy="182" r="5" fill="#93c07b"/><circle cx="120" cy="206" r="5" fill="#93c07b"/>
-            <text x="145" y="305" class="plan__cap" text-anchor="middle">зона отдыха</text>
+          <svg viewBox="0 0 1000 400" class="plan__svg" role="img" aria-label="Интерактивный генплан">
+            <rect width="1000" height="400" fill="#eef2e8"/>
+            <!-- дороги: внешний контур, средняя и нижняя -->
+            <path class="plan__road" d="M22 14 H978 M22 14 V386 M978 14 V386 M22 158 H978 M120 386 H978"/>
+            <!-- въезд снизу слева -->
+            <path class="plan__road" d="M120 386 Q22 386 22 320"/>
+            <path class="plan__road plan__road--thin" d="M22 350 H2"/>
+            <text x="30" y="378" class="plan__cap">въезд</text>
+            <!-- парковка слева сверху -->
+            <rect x="34" y="44" width="54" height="96" rx="4" fill="#dfe5d8" stroke="#c2ccb6" stroke-width="2"/>
+            <path d="M34 62 L88 46 M34 82 L88 66 M34 102 L88 86 M34 122 L88 106" stroke="#c2ccb6" stroke-width="2"/>
+            <text x="61" y="155" class="plan__cap" text-anchor="middle" font-size="11">парковка</text>
             <g class="plots"></g>
           </svg>
         </div>

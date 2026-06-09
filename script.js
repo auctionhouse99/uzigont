@@ -138,46 +138,50 @@ const info = document.getElementById('plotInfo');
 const setProp = (k,v) => info.querySelector(`[data-prop="${k}"]`).textContent = v;
 let activeEl = null;
 
-// Раскладка повторяет генплан: длинная полоса вдоль центральной дороги,
-// верхний ряд — участки №1–12, нижний — №13–25
-const TOP_COUNT = 12, W = 51, H = 80, X0 = 245;
-const TOP_Y = 70, BOT_Y = 286, TOP_PITCH = 60, BOT_PITCH = 55;
-for (let i = 1; i <= 25; i++){
-  const top = i <= TOP_COUNT;
-  const col = top ? (i - 1) : (i - TOP_COUNT - 1);
-  const x = X0 + col * (top ? TOP_PITCH : BOT_PITCH);
-  const y = top ? TOP_Y : BOT_Y;
-  const status = soldSet.has(i) ? 'sold' : bookedSet.has(i) ? 'booked' : 'free';
-  const price = 14.9 + ((i * 37) % 80) / 10;        // 14.9..22.8 млн, детерминированно
+// Раскладка повторяет генплан: верхний ряд (№1–8) вдоль верхней дороги,
+// и нижний блок из двух рядов (№9–17 сверху и №18–25 снизу)
+const rows = [
+  { count: 8, x0: 100, pitch: 108, y: 40,  w: 98, h: 98 }, // верхний ряд
+  { count: 9, x0: 55,  pitch: 101, y: 176, w: 92, h: 92 }, // нижний блок — верхний ряд
+  { count: 8, x0: 132, pitch: 104, y: 280, w: 92, h: 92 }, // нижний блок — нижний ряд
+];
+let n = 0;
+rows.forEach(r => {
+  for (let c = 0; c < r.count; c++){
+    const i = ++n;
+    const x = r.x0 + c * r.pitch, y = r.y, W = r.w, H = r.h;
+    const status = soldSet.has(i) ? 'sold' : bookedSet.has(i) ? 'booked' : 'free';
+    const price = 14.9 + ((i * 37) % 80) / 10;        // 14.9..22.8 млн, детерминированно
 
-  const rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('x', x); rect.setAttribute('y', y);
-  rect.setAttribute('width', W); rect.setAttribute('height', H);
-  rect.setAttribute('rx', 6);
-  rect.setAttribute('class', `plot ${statusMeta[status].cls}`);
+    const rect = document.createElementNS(SVG_NS, 'rect');
+    rect.setAttribute('x', x); rect.setAttribute('y', y);
+    rect.setAttribute('width', W); rect.setAttribute('height', H);
+    rect.setAttribute('rx', 6);
+    rect.setAttribute('class', `plot ${statusMeta[status].cls}`);
 
-  const text = document.createElementNS(SVG_NS, 'text');
-  text.setAttribute('x', x + W/2); text.setAttribute('y', y + H/2 + 4);
-  text.setAttribute('text-anchor', 'middle'); text.setAttribute('class', 'plot__num');
-  text.textContent = i;
+    const text = document.createElementNS(SVG_NS, 'text');
+    text.setAttribute('x', x + W/2); text.setAttribute('y', y + H/2 + 4);
+    text.setAttribute('text-anchor', 'middle'); text.setAttribute('class', 'plot__num');
+    text.textContent = i;
 
-  const select = () => {
-    if (status === 'sold') return;
-    if (activeEl) activeEl.classList.remove('is-active');
-    rect.classList.add('is-active'); activeEl = rect;
-    info.querySelector('.plan__info-title').textContent = `Участок №${i}`;
-    info.querySelector('.plan__info-hint').textContent =
-      status === 'booked' ? 'Участок в брони — уточните актуальность у менеджера.' : 'Закрепим участок за вами на 3 дня.';
-    setProp('id', `№${i}`);
-    setProp('area', '10 соток');
-    setProp('status', statusMeta[status].label);
-    setProp('price', `от ${price.toFixed(1)} млн ₽`);
-  };
-  rect.addEventListener('click', select);
-  text.addEventListener('click', select);
-  plotsLayer.appendChild(rect);
-  plotsLayer.appendChild(text);
-}
+    const select = () => {
+      if (status === 'sold') return;
+      if (activeEl) activeEl.classList.remove('is-active');
+      rect.classList.add('is-active'); activeEl = rect;
+      info.querySelector('.plan__info-title').textContent = `Участок №${i}`;
+      info.querySelector('.plan__info-hint').textContent =
+        status === 'booked' ? 'Участок в брони — уточните актуальность у менеджера.' : 'Закрепим участок за вами на 3 дня.';
+      setProp('id', `№${i}`);
+      setProp('area', '10 соток');
+      setProp('status', statusMeta[status].label);
+      setProp('price', `от ${price.toFixed(1)} млн ₽`);
+    };
+    rect.addEventListener('click', select);
+    text.addEventListener('click', select);
+    plotsLayer.appendChild(rect);
+    plotsLayer.appendChild(text);
+  }
+});
 
 /* ===== Quiz ===== */
 const quizData = [
