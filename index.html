@@ -124,7 +124,7 @@
       <div class="section__head center">
         <span class="tag tag--light">Генплан</span>
         <h2 class="section__title section__title--light">Генеральный план посёлка</h2>
-        <p class="section__sub section__sub--light">Общая территория посёлка — 3 Га. На ней расположены 25 участков площадью 10 соток. К каждому участку ведёт благоустроенная подъездная дорога.</p>
+        <p class="section__sub section__sub--light">Общая территория посёлка — 3 Га. На ней расположены 25 участков площадью 8 - 10 соток. К каждому участку ведёт благоустроенная подъездная дорога.</p>
       </div>
 
       <div class="plan__aerial">
@@ -135,9 +135,22 @@
         <div class="plan__map">
           <svg viewBox="0 0 1000 420" class="plan__svg" role="img" aria-label="Интерактивный генплан">
             <rect width="1000" height="420" fill="#eef2e8"/>
-            <path class="plan__road" d="M0 210 H1000"/>
-            <path class="plan__road plan__road--thin" d="M40 20 V400 M960 20 V400"/>
-            <text x="14" y="205" class="plan__cap">въезд / КПП →</text>
+            <!-- лес по периметру -->
+            <g>
+              <circle cx="35" cy="40" r="20" fill="#cfe0c2"/><circle cx="80" cy="28" r="15" fill="#cfe0c2"/>
+              <circle cx="965" cy="46" r="22" fill="#cfe0c2"/><circle cx="928" cy="26" r="14" fill="#cfe0c2"/>
+              <circle cx="975" cy="378" r="20" fill="#cfe0c2"/><circle cx="935" cy="395" r="14" fill="#cfe0c2"/>
+            </g>
+            <!-- въезд / КПП снизу слева -->
+            <path class="plan__road plan__road--thin" d="M30 410 V235 H150"/>
+            <text x="18" y="405" class="plan__cap">въезд / КПП</text>
+            <!-- центральная дорога -->
+            <path class="plan__road" d="M150 235 H975"/>
+            <!-- зона отдыха: парк и пруд -->
+            <rect x="70" y="150" width="150" height="170" rx="16" fill="#d6e8cb"/>
+            <path d="M95 250 q30 -52 92 -30 q22 28 -16 54 q-48 28 -76 -24 Z" fill="#bcdcee"/>
+            <circle cx="108" cy="188" r="6" fill="#93c07b"/><circle cx="132" cy="182" r="5" fill="#93c07b"/><circle cx="120" cy="206" r="5" fill="#93c07b"/>
+            <text x="145" y="305" class="plan__cap" text-anchor="middle">зона отдыха</text>
             <g class="plots"></g>
           </svg>
         </div>
@@ -168,7 +181,7 @@
       <div class="section__head center">
         <span class="tag">Расположение</span>
         <h2 class="section__title">На карте</h2>
-        <p class="section__sub">Ленинградская область, Ломоносовский район, деревня Узигонты. 3 км до КАД, 20 минут до метро «Проспект Ветеранов».</p>
+        <p class="section__sub">Ленинградская область, Ломоносовский район, деревня Узигонты. 3 км до КАД, 20 минут до метро «Проспект Ветеранов», 5 минут до Петергофа и фонтанов.</p>
       </div>
       <div class="location__grid">
         <div class="location__map">
@@ -210,14 +223,14 @@
           <img src="images/project2-2.jpg" alt="Стеновые конструкции" />
           <div class="qcard__body">
             <h4>Стеновые конструкции</h4>
-            <p>Газосиликатные блоки толщиной 250 мм с утеплением 80 мм создают надёжную основу для комфорта. Фасадные термопанели поддерживают оптимальный микроклимат.</p>
+            <p>Газобетонные блоки толщиной 400 мм с утеплением 100 мм создают надёжную основу для комфорта.</p>
           </div>
         </article>
         <article class="qcard">
           <img src="images/project3-4.jpg" alt="Кровля премиального уровня" />
           <div class="qcard__body">
             <h4>Кровля премиального уровня</h4>
-            <p>Плоская утеплённая кровля с ПВХ-мембраной и современной водосточной системой. Тепловой контур рассчитан на круглогодичное проживание.</p>
+            <p>Плоская наплавляемая кровля с современной водосточной системой. Тепловой контур рассчитан на круглогодичное проживание.</p>
           </div>
         </article>
         <article class="qcard">
